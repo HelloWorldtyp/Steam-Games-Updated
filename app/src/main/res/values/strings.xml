@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Video Games App</string>
+    <string name="recycler_view">Recycler View</string>
+    <string-array name="games">
+        <item>Metal Gear</item>
+        <item>Celeste</item>
+        <item>PUBG</item>
+        <item>Player Unknown Battlegrounds</item>
+        <item>Half-Life</item>
+        <item>Portal</item>
+        <item>Yakuza</item>
+        <item>Lisa the Painful</item>
+        <item>Stanley Parable</item>
+    </string-array>
+</resources>
