@@ -26,5 +26,37 @@ public class PlatformerGames extends AppCompatActivity {
         rainButton = findViewById(R.id.rainButon);
         deadButton = findViewById(R.id.deadButton);
 
+        hatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), HatInTime.class);
+                startActivity(i);
+            }
+        });
+
+        cupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent j = new Intent(getApplicationContext(), Cuphead.class);
+                startActivity(j);
+            }
+        });
+
+        rainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getApplicationContext(), RainWorld.class);
+                startActivity(k);
+            }
+        });
+
+        deadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent l = new Intent(getApplicationContext(), DeadCells.class);
+                startActivity(l);
+            }
+        });
+
     }
 }

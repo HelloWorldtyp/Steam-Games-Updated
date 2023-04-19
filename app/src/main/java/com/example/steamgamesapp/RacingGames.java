@@ -1,6 +1,8 @@
 package com.example.steamgamesapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +23,38 @@ public class RacingGames extends AppCompatActivity {
         forizonButton = findViewById(R.id.forizonButton);
         snowButton = findViewById(R.id.snowButton);
         truckButton = findViewById(R.id.truckButton);
+
+        grandButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), GrandTheft.class);
+                startActivity(i);
+            }
+        });
+
+        forizonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent j = new Intent(getApplicationContext(), Forizon.class);
+                startActivity(j);
+            }
+        });
+
+        snowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getApplicationContext(), SnowRunner.class);
+                startActivity(k);
+            }
+        });
+
+        truckButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent l = new Intent(getApplicationContext(), TruckSimulator.class);
+                startActivity(l);
+            }
+        });
 
     }
 }

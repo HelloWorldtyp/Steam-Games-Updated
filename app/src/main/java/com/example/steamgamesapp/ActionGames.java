@@ -27,8 +27,32 @@ public class ActionGames extends AppCompatActivity {
         destinyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), ActionGames.class);
+                Intent i = new Intent(getApplicationContext(), Destiny.class);
                 startActivity(i);
+            }
+        });
+
+        apexButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent j = new Intent(getApplicationContext(), apexlegends.class);
+                startActivity(j);
+            }
+        });
+
+        dotaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getApplicationContext(), Dota.class);
+                startActivity(k);
+            }
+        });
+
+        pubgButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent l = new Intent(getApplicationContext(), PUBG.class);
+                startActivity(l);
             }
         });
 
