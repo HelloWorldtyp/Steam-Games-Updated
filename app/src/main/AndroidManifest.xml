@@ -29,7 +29,24 @@
         <activity android:name=".BoomerGames"></activity>
         <activity android:name=".RacingGames"></activity>
         <activity android:name=".PlatformerGames"></activity>
-
+        <activity android:name=".apexlegends"></activity>
+        <activity android:name=".cultic"></activity>
+        <activity android:name=".Cuphead"></activity>
+        <activity android:name=".DeadCells"></activity>
+        <activity android:name=".Destiny"></activity>
+        <activity android:name="Doom"></activity>
+        <activity android:name=".DoomEternal"></activity>
+        <activity android:name="Dota"></activity>
+        <activity android:name=".Forizon"></activity>
+        <activity android:name=".GrandTheft"></activity>
+        <activity android:name=".HatInTime"></activity>
+        <activity android:name=".PUBG"></activity>
+        <activity android:name=".SnowRunner"></activity>
+        <activity android:name=".RainWorld"></activity>
+        <activity android:name=".TruckSimulator"></activity>
+        <activity android:name=".UltraKill"></activity>
+        <activity android:name=".WishList"></activity>
+        <activity android:name=".Buying"></activity>
     </application>
 
 </manifest>

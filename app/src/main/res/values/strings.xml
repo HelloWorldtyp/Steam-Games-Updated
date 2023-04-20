@@ -2,14 +2,21 @@
     <string name="app_name">Video Games App</string>
     <string name="recycler_view">Recycler View</string>
     <string-array name="games">
-        <item>Metal Gear</item>
-        <item>Celeste</item>
+        <item>Apex Legends</item>
+        <item>Cultic</item>
+        <item>CupHead</item>
+        <item>Dead Cells</item>
+        <item>Destiny 2</item>
+        <item>Doom 2016</item>
+        <item>Doom Eternal</item>
+        <item>Dota</item>
+        <item>Forizon</item>
+        <item>Grand Theft Auto V</item>
+        <item>Hat in Time</item>
         <item>PUBG</item>
-        <item>Player Unknown Battlegrounds</item>
-        <item>Half-Life</item>
-        <item>Portal</item>
-        <item>Yakuza</item>
-        <item>Lisa the Painful</item>
-        <item>Stanley Parable</item>
+        <item>Rain World</item>
+        <item>SnowRunner</item>
+        <item>American Truck Simulator</item>
+        <item>UltraKill</item>
     </string-array>
 </resources>
