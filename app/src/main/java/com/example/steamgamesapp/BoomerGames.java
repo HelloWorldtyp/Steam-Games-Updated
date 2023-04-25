@@ -12,6 +12,7 @@ public class BoomerGames extends AppCompatActivity {
     Button culticButton;
     Button doomButton;
     Button doomEternalButton;
+    Button homeScreenButton;
 
 
     @Override
@@ -23,6 +24,15 @@ public class BoomerGames extends AppCompatActivity {
         culticButton = findViewById(R.id.culticButton);
         doomButton = findViewById(R.id.doomButton);
         doomEternalButton = findViewById(R.id.doomEternalButton);
+        homeScreenButton = findViewById(R.id.homeScreenButton);
+
+        homeScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         ultraButton.setOnClickListener(new View.OnClickListener() {
             @Override

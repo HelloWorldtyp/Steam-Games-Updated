@@ -14,6 +14,7 @@ public class PlatformerGames extends AppCompatActivity {
     Button cupButton;
     Button rainButton;
     Button deadButton;
+    Button homeScreenButton;
 
 
     @Override
@@ -25,6 +26,15 @@ public class PlatformerGames extends AppCompatActivity {
         cupButton = findViewById(R.id.cupButton);
         rainButton = findViewById(R.id.rainButon);
         deadButton = findViewById(R.id.deadButton);
+        homeScreenButton = findViewById(R.id.homeScreenButton);
+
+        homeScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         hatButton.setOnClickListener(new View.OnClickListener() {
             @Override

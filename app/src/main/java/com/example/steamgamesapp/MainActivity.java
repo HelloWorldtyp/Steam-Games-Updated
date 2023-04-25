@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     Button boomerButton;
     Button racingButton;
     Button platformersButton;
+    Button wishlistButton;
+    Button yourGames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         boomerButton = findViewById(R.id.boomerButton);
         racingButton = findViewById(R.id.racingButton);
         platformersButton = findViewById(R.id.platformersButton);
+        wishlistButton = findViewById(R.id.wishlistMainButton);
+        yourGames = findViewById(R.id.YourGamesButton);
 
 
 
@@ -57,6 +61,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent m = new Intent(getApplicationContext(), PlatformerGames.class);
                 startActivity(m);
+            }
+        });
+
+        wishlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent n = new Intent(getApplicationContext(), WishList.class);
+                startActivity(n);
+            }
+        });
+
+        yourGames.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent o = new Intent(getApplicationContext(), Games.class);
+                startActivity(o);
             }
         });
     }

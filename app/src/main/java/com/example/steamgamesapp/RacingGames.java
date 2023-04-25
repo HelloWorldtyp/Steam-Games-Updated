@@ -12,6 +12,7 @@ public class RacingGames extends AppCompatActivity {
     Button forizonButton;
     Button snowButton;
     Button truckButton;
+    Button homeScreenButton;
 
 
     @Override
@@ -23,6 +24,15 @@ public class RacingGames extends AppCompatActivity {
         forizonButton = findViewById(R.id.forizonButton);
         snowButton = findViewById(R.id.snowButton);
         truckButton = findViewById(R.id.truckButton);
+        homeScreenButton = findViewById(R.id.homeScreenButton);
+
+        homeScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         grandButton.setOnClickListener(new View.OnClickListener() {
             @Override

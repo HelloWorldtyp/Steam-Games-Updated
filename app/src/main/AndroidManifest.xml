@@ -47,6 +47,8 @@
         <activity android:name=".UltraKill"></activity>
         <activity android:name=".WishList"></activity>
         <activity android:name=".Buying"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".Games"></activity>
     </application>
 
 </manifest>

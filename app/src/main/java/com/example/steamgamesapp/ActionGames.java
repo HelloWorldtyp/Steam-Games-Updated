@@ -12,6 +12,7 @@ public class ActionGames extends AppCompatActivity {
     Button apexButton;
     Button dotaButton;
     Button pubgButton;
+    Button homeScreenButton;
 
 
     @Override
@@ -23,6 +24,15 @@ public class ActionGames extends AppCompatActivity {
         apexButton = findViewById(R.id.apexButton);
         dotaButton = findViewById(R.id.dotaButton);
         pubgButton = findViewById(R.id.pubgButton);
+        homeScreenButton = findViewById(R.id.homeScreenButton);
+
+        homeScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         destinyButton.setOnClickListener(new View.OnClickListener() {
             @Override

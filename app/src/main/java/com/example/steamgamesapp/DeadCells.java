@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DeadCells extends AppCompatActivity {
     Button buyButton;
     Button wishlistButton;
+    Button homeScreenButton;
+
 
 
     @Override
@@ -19,6 +21,15 @@ public class DeadCells extends AppCompatActivity {
 
         buyButton = findViewById(R.id.buyButton);
         wishlistButton = findViewById(R.id.wishlistButton);
+        homeScreenButton = findViewById(R.id.homeScreenButton);
+
+        homeScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         wishlistButton.setOnClickListener(new View.OnClickListener() {
             @Override
