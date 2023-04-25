@@ -37,6 +37,9 @@ public class WishList  extends AppCompatActivity {
         deleteButton = findViewById(R.id.deleteButton);
         homeScreenButton = findViewById(R.id.homeScreenButton);
         recycle = findViewById(R.id.recycle);
+        spinner = findViewById(R.id.spinner);
+        priceEdit = findViewById(R.id.editPrice);
+        resultView = findViewById(R.id.resultView);
 
         homeScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +53,7 @@ public class WishList  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 control.open();
-                String price = priceEdit.getText().toString();
+                String price = control.getPrice((String) spinner.getSelectedItem());
                 control.close();
                 resultView.setText(price);
             }
@@ -73,9 +76,8 @@ public class WishList  extends AppCompatActivity {
                 String price = priceEdit.getText().toString();
                 control.open();
                 boolean itWorked = control.insert(name);
-                boolean itStillWorked = control.insert(price);
                 control.close();
-                if(itWorked && itStillWorked){
+                if(itWorked){
                     Toast.makeText(getApplicationContext(), "Added "+name+" "+price, Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplicationContext(), "FAILED "+name+" "+price, Toast.LENGTH_SHORT).show();
@@ -85,7 +87,7 @@ public class WishList  extends AppCompatActivity {
 
         control = new DatabaseControl(this);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.name, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.games, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
     }

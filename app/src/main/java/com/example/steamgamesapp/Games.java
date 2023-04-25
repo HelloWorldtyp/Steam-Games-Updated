@@ -18,13 +18,15 @@ public class Games extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.games);
 
+        games = findViewById(R.id.theGame);
+        price = findViewById(R.id.thePrice);
 
     }
 
     private void updateGames(){
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
         newPrice = sp.getInt("new price", 69);
-        newGame = sp.getString("new games", "string");
+        newGame = sp.getString("new games", "Game");
         games.setText(newGame + "");
         price.setText(newPrice + "");
 //

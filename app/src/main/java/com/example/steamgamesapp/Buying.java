@@ -23,6 +23,7 @@ public class Buying extends AppCompatActivity {
 
     Button completeButton;
     Button settingsButton;
+    Button homeScreenButton;
     EditText CSC;
     EditText card;
     EditText experiationDate;
@@ -43,6 +44,15 @@ public class Buying extends AppCompatActivity {
         experiationDate = findViewById(R.id.experationDate);
         price = findViewById(R.id.price);
         game = findViewById(R.id.nameOfGame);
+        homeScreenButton = findViewById(R.id.homeScreenButton);
+
+        homeScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent m = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(m);
+            }
+        });
 
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,9 +77,9 @@ public class Buying extends AppCompatActivity {
 
     private void updateCreditCard(){
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
-        newCard = sp.getInt("new tip", 69);
-        newSecurity = sp.getInt("new secuirty", 69);
-        newExperation = sp.getInt("new experation", 69);
+        newCard = sp.getInt("new card", 0);
+        newSecurity = sp.getInt("new security", 0);
+        newExperation = sp.getInt("new expiration", 0);
         card.setText(newCard + "");
         CSC.setText(newSecurity + "");
         experiationDate.setText(newExperation + "");
@@ -79,18 +89,18 @@ public class Buying extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         intPrice = Integer.parseInt(price.getText().toString());
-        String Security = game.getText().toString();
+        String Game = game.getText().toString();
         editor.putInt("new card", intPrice);
-        editor.putString("new secuirty", Security);
+        editor.putString("new game", Game);
         editor.commit();
     }
 
     private void updateFinal(){
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
         intPrice = sp.getInt("new price", 69);
-        String Security = sp.getString("new secuirty", "string");
+        String Game = sp.getString("new game", "string");
         price.setText(intPrice + "");
-        game.setText(Security + "");
+        game.setText(Game + "");
 
 
     }

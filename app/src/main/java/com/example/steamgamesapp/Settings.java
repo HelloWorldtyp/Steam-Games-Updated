@@ -55,16 +55,16 @@ public class Settings extends AppCompatActivity {
         intSecurity = Integer.parseInt(cardSecuirtyCode.getText().toString());
         intExperation = Integer.parseInt(experationDate.getText().toString());
         editor.putInt("new card", intCard);
-        editor.putInt("new secuirty", intSecurity);
-        editor.putInt("new experation", intExperation);
+        editor.putInt("new security", intSecurity);
+        editor.putInt("new expiration", intExperation);
         editor.commit();
     }
 
     private void updateFinal(){
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
         intCard = sp.getInt("new card", 69);
-        intSecurity = sp.getInt("new secuirty", 69);
-        intExperation = sp.getInt("new experation", 69);
+        intSecurity = sp.getInt("new security", 69);
+        intExperation = sp.getInt("new expiration", 69);
         creditCardNumber.setText(intCard + "");
         cardSecuirtyCode.setText(intSecurity + "");
         experationDate.setText(intExperation + "");
