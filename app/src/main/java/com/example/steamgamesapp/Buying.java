@@ -18,6 +18,7 @@ public class Buying extends AppCompatActivity {
     private int newSecurity;
     private int newExperation;
     private int intPrice;
+    private String Game;
 
 
 
@@ -26,7 +27,7 @@ public class Buying extends AppCompatActivity {
     Button homeScreenButton;
     EditText CSC;
     EditText card;
-    EditText experiationDate;
+    EditText expirationDate;
     EditText price;
     EditText game;
 
@@ -41,7 +42,7 @@ public class Buying extends AppCompatActivity {
 
         CSC = findViewById(R.id.cardSecurity);
         card = findViewById(R.id.credit);
-        experiationDate = findViewById(R.id.experationDate);
+        expirationDate = findViewById(R.id.experationDate);
         price = findViewById(R.id.price);
         game = findViewById(R.id.nameOfGame);
         homeScreenButton = findViewById(R.id.homeScreenButton);
@@ -82,15 +83,15 @@ public class Buying extends AppCompatActivity {
         newExperation = sp.getInt("new expiration", 0);
         card.setText(newCard + "");
         CSC.setText(newSecurity + "");
-        experiationDate.setText(newExperation + "");
+        expirationDate.setText(newExperation + "");
 
     }
     private void updateSharedPreferences(){
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         intPrice = Integer.parseInt(price.getText().toString());
-        String Game = game.getText().toString();
-        editor.putInt("new card", intPrice);
+        Game = game.getText().toString();
+        editor.putInt("new price", intPrice);
         editor.putString("new game", Game);
         editor.commit();
     }
@@ -98,11 +99,17 @@ public class Buying extends AppCompatActivity {
     private void updateFinal(){
         SharedPreferences sp = getSharedPreferences("shared", MODE_PRIVATE);
         intPrice = sp.getInt("new price", 69);
-        String Game = sp.getString("new game", "string");
+        Game = sp.getString("new game", "string");
         price.setText(intPrice + "");
         game.setText(Game + "");
 
 
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        updateSharedPreferences();
     }
 
     @Override
