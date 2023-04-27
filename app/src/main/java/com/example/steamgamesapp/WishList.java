@@ -55,7 +55,7 @@ public class WishList  extends AppCompatActivity {
                 control.open();
                 String price = control.getPrice((String) spinner.getSelectedItem());
                 control.close();
-                resultView.setText(price);
+                resultView.setText(price+spinner.getSelectedItem());
             }
         });
 
@@ -75,7 +75,7 @@ public class WishList  extends AppCompatActivity {
                 String name = (String) spinner.getSelectedItem();
                 String price = priceEdit.getText().toString();
                 control.open();
-                boolean itWorked = control.insert(name);
+                boolean itWorked = control.insert(name, price);
                 control.close();
                 if(itWorked){
                     Toast.makeText(getApplicationContext(), "Added "+name+" "+price, Toast.LENGTH_SHORT).show();
@@ -109,7 +109,7 @@ public class WishList  extends AppCompatActivity {
                 control.open();
                 String price = control.getPrice(name);
                 control.close();
-                resultView.setText(name+": "+price);
+                resultView.setText(price);
             }
         });
         recycle.setAdapter(adapter);

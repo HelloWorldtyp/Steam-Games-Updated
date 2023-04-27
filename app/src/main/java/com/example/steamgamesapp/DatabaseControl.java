@@ -23,9 +23,10 @@ public class DatabaseControl {
         helper.close();
     }
 
-    public boolean insert(String name){
+    public boolean insert(String name, String price){
         ContentValues values = new ContentValues();
         values.put("name", name);
+        values.put("price", price);
         return database.insert("games", null, values) > 0;
     }
 
